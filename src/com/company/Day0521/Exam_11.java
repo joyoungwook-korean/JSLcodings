@@ -20,13 +20,13 @@ public class Exam_11 {
                 }else{
                     me=c;
                     min =b;
+
                 }
             }else{
               max=c;
               me=a;
               min=b;
             }
-
         }else if(b>c){
             max=b;
             if(a>c){
