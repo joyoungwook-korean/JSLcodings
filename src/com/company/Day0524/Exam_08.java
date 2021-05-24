@@ -28,9 +28,14 @@ public class Exam_08 {
         }else if((30>=car_stay)&&(car_stay>=10)){
             car_pee = 500;
         }else{
+            if((car_stay%10 >=1) && (car_stay%10 <=9)){
+                car_stay = car_stay-10;
+                car_pee = car_stay/10*500;
+            }else{
+                car_stay = car_stay-20;
+                car_pee = (car_stay/10)*500;
+            }
 
-            car_stay = car_stay-10;
-            car_pee = (car_stay/10)*500;
         }
         if(car_pee>=30000){
             car_pee = 30000;
