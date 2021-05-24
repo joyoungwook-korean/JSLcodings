@@ -5,7 +5,6 @@ T : 문자 한개출력
 F : 에러 출력
  */
 
-import com.sun.javaws.exceptions.ErrorCodeResponseException;
 
 import java.util.Scanner;
 
