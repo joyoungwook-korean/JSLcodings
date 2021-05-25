@@ -5,19 +5,23 @@ import java.util.Scanner;
 public class Exam_13 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int num=0;
-        int zin=0;
+        int num;
+        int zin;
 
-        do{
+
+        while (true){
             System.out.print("10진수 : ");
-            num = scanner.nextInt();
+            num= scanner.nextInt();
             System.out.print("\n");
             System.out.print("변환 진수 : ");
             zin = scanner.nextInt();
             System.out.print("\n");
+            if (num == 0) break;
             cnum2(num, zin);
+        }
 
-        }while (num==0);
+
+
     }
 
     public static void cnum2(int num, int zin){
