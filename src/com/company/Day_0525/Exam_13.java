@@ -15,7 +15,6 @@ public class Exam_13 {
             System.out.print("변환 진수 : ");
             zin = scanner.nextInt();
             System.out.print("\n");
-
             cnum2(num, zin);
 
         }while (num==0);
@@ -23,16 +22,8 @@ public class Exam_13 {
 
     public static void cnum2(int num, int zin){
         String save ="";
-        if(zin==2){ // 2진수 출력 구문
-            save = gugu(num,zin);
-        }else if(zin==8){ // 8진수 출력구문
-            save = gugu(num,zin);
-        }else if( zin==16){ //  16진수 출력구문
-            save = gugu(num,zin);
-        }else{
-            System.out.println("진수가 잘못되었습니다");
-        }
-
+        if(!(zin==2) && !(zin==8) && !(zin==16)) System.out.println("진수가 잘못 되었습니다.");
+        else save = gugu(num,zin);
         System.out.println(save);
     }
 
