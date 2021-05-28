@@ -1,4 +1,4 @@
-package com.company.Day_0514.Exam_02;
+package com.company.jsl_05.Day_0514.Exam_02;
 
 import java.util.Scanner;
 

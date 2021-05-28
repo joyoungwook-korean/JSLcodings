@@ -1,4 +1,4 @@
-package com.company.Day0524;
+package com.company.jsl_05.Day0524;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package com.company.Day_0514.Exam_01;
+package com.company.jsl_05.Day_0514.Exam_01;
 
 public class Main {
 

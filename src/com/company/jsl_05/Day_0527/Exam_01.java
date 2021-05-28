@@ -1,4 +1,4 @@
-package com.company.Day_0527;
+package com.company.jsl_05.Day_0527;
 /*
 구구단
  */

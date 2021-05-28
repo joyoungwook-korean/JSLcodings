@@ -1,4 +1,4 @@
-package com.company.Day0521;
+package com.company.jsl_05.Day0521;
 
 /*
 키보드를 정수 2개를 입력받아서

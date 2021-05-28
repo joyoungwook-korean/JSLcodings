@@ -1,4 +1,4 @@
-package com.company.Day0521;
+package com.company.jsl_05.Day0521;
 /*
 문자 한개를 입력받아서
 T : 문자 한개출력

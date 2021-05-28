@@ -1,4 +1,4 @@
-package com.company.Day0524;
+package com.company.jsl_05.Day0524;
 /*
 키보드로 정수를 입력 받아서 합 평균을 출력
  */

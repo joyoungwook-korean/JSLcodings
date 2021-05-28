@@ -1,4 +1,4 @@
-package com.company.Day0524;
+package com.company.jsl_05.Day0524;
 /*
 키보드로 이름, 국어, 영어 , 수학을 입력받아서
 이름, 총점, 평균, 학점, 판정 출력
