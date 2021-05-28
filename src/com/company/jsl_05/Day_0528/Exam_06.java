@@ -31,6 +31,7 @@ public class Exam_06 {
                 break;
             }
             for (int i = 0; i < 10; i++) {
+                System.out.print(num + " ");
                 if (cnt == 0) {
                     mok = num / a;
                     num = num % a;
