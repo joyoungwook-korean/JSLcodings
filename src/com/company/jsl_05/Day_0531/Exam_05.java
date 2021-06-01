@@ -11,7 +11,7 @@ import java.awt.*;
  */
 public class Exam_05 {
     public static void main(String[] args) {
-        int val[] ={87,90,67,59,88,76,95,87};
+        int val[] ={87,85,67,74,88,84,86,90};
         int tot=0,avg;
         int savemin=0, savemax,save=0;
         for(int i : val){
@@ -22,15 +22,25 @@ public class Exam_05 {
         avg = tot/val.length;
         System.out.println(avg);
 
-        for(int i=0; i<val.length-1; i++){
-            savemax  = avg -val[i];
-            savemin = avg - val[i+1];
-            if((savemax > savemin) && savemax>0){
-                save=val[i];
+        save = val[0];
+        savemax = avg-val[0];
+        if(savemax < 0 ) savemax = savemax*-1;
+
+
+        for(int i=1; i<val.length; i++){
+
+            savemin = avg - val[i];
+            if(savemin <0) savemin = savemin*-1;
+
+            if((savemax > savemin) ) {
+                savemax = savemin;
+                save = val[i];
             }
-            if(savemin<savemax && savemax<0) save = val[i];
+
             if (savemin == 0){
                 save=val[i+1];
+            }else if(savemax ==0){
+                save=val[i];
             }
         }
 
