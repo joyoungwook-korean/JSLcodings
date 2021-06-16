@@ -1,21 +1,20 @@
 package com.company.jsl_06.Day_0616;
 
-public class NumberSortExam extends NumberSort{
-
+public class NumberSortExam extends NumberSort {
+    int temp;
 
     public NumberSortExam(int[] num, int cnt) {
-        super(num,cnt);
+        super(num, cnt);
     }
 
 
     @Override
     void AscSort() {
-        int temp;
-        for(int i=0; i<cnt;i++){
-            for(int y=0; y<cnt-1; y++){
-                if(num[y]>num[y+1]){
-                    temp = num[y+1];
-                    num[y+1] = num[y];
+        for (int i = 0; i < cnt; i++) {
+            for (int y = 0; y < cnt - 1; y++) {
+                if (num[y] > num[y + 1]) {
+                    temp = num[y + 1];
+                    num[y + 1] = num[y];
                     num[y] = temp;
                 }
             }
@@ -26,13 +25,12 @@ public class NumberSortExam extends NumberSort{
 
     @Override
     void DescSort() {
-        int temp;
-        for(int i=0; i<cnt;i++){
-            for(int y=0; y<cnt-1; y++){
-                if(num[y]<num[y+1]){
+        for (int i = 0; i < cnt; i++) {
+            for (int y = 0; y < cnt - 1; y++) {
+                if (num[y] < num[y + 1]) {
                     temp = num[y];
-                    num[y] = num[y+1];
-                    num[y+1] = temp;
+                    num[y] = num[y + 1];
+                    num[y + 1] = temp;
                 }
             }
 
@@ -42,8 +40,7 @@ public class NumberSortExam extends NumberSort{
 
     @Override
     void add() {
-        int temp;
-        temp = num[0]-num[cnt-1];
+        temp = num[0] - num[cnt - 1];
 
         System.out.println(temp);
     }
