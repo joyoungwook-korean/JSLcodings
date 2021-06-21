@@ -15,20 +15,22 @@ public class Parking {
     public Parking(String carNo, int parkTime) {
         this.carNo = carNo;
         this.parkTime = parkTime;
+        this.money = setMoney();
     }
+
 
     public int setMoney() {
         if(10>parkTime){
-            this.money = 0;
+            money = 0;
         }else if((30>=parkTime)&&(parkTime>=10)){
-            this.money = 500;
+            money = 500;
         }else{
-            this.money = ((parkTime-10)/10)*500;
+            money = ((parkTime-10)/10)*500;
         }
         if(this.money>=30000){
-            this.money = 30000;
+            money = 30000;
         }
-        return this.money;
+        return money;
     }
 
     public String getCarNo() {
@@ -45,6 +47,7 @@ public class Parking {
 
     public void setParkTime(int parkTime) {
         this.parkTime = parkTime;
+        this.money = setMoney();
     }
 
     public void setMoney(int money) {
@@ -55,15 +58,9 @@ public class Parking {
         return money;
     }
 
-    void pirntCar(){
-        System.out.println(carNo + "\t" + parkTime + "\t" + money);
+    void printCar(){
+        System.out.println(getCarNo() + "\t" + getParkTime() + "\t\t" +getMoney() );
     }
-
-
-
-
-
-
 
 
 }
