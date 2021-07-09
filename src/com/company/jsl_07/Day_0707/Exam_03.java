@@ -13,16 +13,21 @@ public class Exam_03 {
         list.add("hi");
         list.add("hey");
 
-        int max=-1;
-        int temp=0;
-        for(int i=0; i<list.size(); i++){
-            String s=list.get(i);
+        int max = -1;
+        ArrayList<Integer> arrayList = new ArrayList<>();
+        for (int i = 0; i < list.size(); i++) {
+            String s = list.get(i);
             char[] c = s.toCharArray();
-            if(c.length>max){
-                max=c.length;
-                temp = i;
+            if (c.length >= max) {
+                max = c.length;
+                arrayList.add(i);
             }
         }
-        System.out.println("output : "+list.get(temp));
+        for (int i = 0; i < arrayList.size(); i++) {
+            char[] c = list.get(arrayList.get(i)).toCharArray();
+            if (max == c.length) {
+                System.out.println("output : " + list.get(arrayList.get(i)));
+            }
+        }
     }
 }

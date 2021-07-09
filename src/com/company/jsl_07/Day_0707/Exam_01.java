@@ -15,16 +15,17 @@ public class Exam_01 {
         Scanner scanner = new Scanner(System.in);
         int a = scanner.nextInt();
 
-        int temp = 0;
+
         int cnt=0;
         while (true){
+
             int b = list.indexOf(a);
-            temp=b;
+
             if(b==-1) {
                 break;
             }else{
                 list.remove(b);
-                list2.add(temp+cnt);
+                list2.add(b+cnt);
                 cnt++;
             }
         }
