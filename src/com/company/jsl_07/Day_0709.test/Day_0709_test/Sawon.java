@@ -1,4 +1,4 @@
-package com.company.jsl_07.Day_0709_test;
+package com.company.jsl_07.Day_0709.test.Day_0709_test;
 
 import java.util.Objects;
 
