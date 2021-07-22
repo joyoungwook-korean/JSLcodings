@@ -1,5 +1,7 @@
 package com.company.jsl_07.ShopProject.model;
 
+import java.text.DecimalFormat;
+
 public class MoneyVO {
     private int custno;
     private int saleno;
@@ -8,6 +10,9 @@ public class MoneyVO {
     private int price;
     private String pcode;
     private String sdate;
+
+    DecimalFormat decimalFormat = new DecimalFormat("###,###");
+
 
     public int getCustno() {
         return custno;
@@ -42,6 +47,7 @@ public class MoneyVO {
     }
 
     public int getPrice() {
+        decimalFormat.format(price);
         return price;
     }
 
@@ -63,5 +69,18 @@ public class MoneyVO {
 
     public void setSdate(String sdate) {
         this.sdate = sdate;
+    }
+
+    @Override
+    public String toString() {
+
+        return
+                  custno +
+                "\t" + saleno +
+                          "\t" + pcost +
+                          " \t" + amount +
+                          "\t" + decimalFormat.format(price) +
+                          " \t" + pcode+
+                          "\t" + sdate;
     }
 }

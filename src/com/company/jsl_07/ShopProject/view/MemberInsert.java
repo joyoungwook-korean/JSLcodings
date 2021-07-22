@@ -2,7 +2,7 @@ package com.company.jsl_07.ShopProject.view;
 
 
 import com.company.jsl_07.ShopProject.model.MemberVO;
-import com.company.jsl_07.ShopProject.model.ShopDAO;
+import com.company.jsl_07.ShopProject.model.dao.ShopDAO;
 
 import java.util.Scanner;
 
