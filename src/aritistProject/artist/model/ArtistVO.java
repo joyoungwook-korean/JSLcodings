@@ -13,6 +13,7 @@ public class ArtistVO {
     private String mento_name;
     private int serial_no;
     private String string_Point;
+
     private double avg;
 
     public String getAvg() {
