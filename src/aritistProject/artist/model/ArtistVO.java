@@ -22,6 +22,8 @@ public class ArtistVO {
         return aa;
     }
 
+
+
     public void setAvg(double avg) {
         this.avg = avg;
     }

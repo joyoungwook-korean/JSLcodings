@@ -44,9 +44,6 @@ public class StudentVO {
         return full_num;
     }
 
-    public void setFull_num(){
-        this.full_num = syear + "-" + sclass + "-" + sno;
-    }
     public void setFull_num(String full_num) {
         this.full_num = full_num;
     }

@@ -115,10 +115,10 @@ public class StudentDAO {
     }
 
     public List<StudentVO> select_Stu_Sco(){
-        String sql = "select st.syear, st.sno, st.sclass,gender, sname, kor,eng,mat " +
-                "        from tel_score_201905 sc, tbl_student_201905 st " +
-                "        where sc.syear=st.syear and sc.sno = st.sno and  sc.sclass = st.sclass " +
-                "        group by  st.syear, st.sno, st.sclass";
+        String sql = "select group_concat(st.syear,'-' ,st.sno,'-' ,st.sclass)as group1 ,gender, sname, kor,eng,mat " +
+                "from tel_score_201905 sc, tbl_student_201905 st " +
+                "where sc.syear=st.syear and sc.sno = st.sno and  sc.sclass = st.sclass " +
+                "group by  st.syear, st.sno, st.sclass";
                 List<StudentVO> list = new ArrayList<>();
         PreparedStatement pstmt = StudentMysqlManager.con(sql);
         ResultSet rs = null;
@@ -126,10 +126,7 @@ public class StudentDAO {
             rs = pstmt.executeQuery();
             while (rs.next()){
                 StudentVO vo = new StudentVO();
-                vo.setSyear(rs.getString("syear"));
-                vo.setSclass(rs.getString("sclass"));
-                vo.setSno(rs.getString("sno"));
-                vo.setFull_num();
+                vo.setFull_num(rs.getString("group1"));
                 vo.setSname(rs.getString("sname"));
                 vo.setGender(check_gender(rs.getString("gender")));
                 vo.setKor(rs.getInt("kor"));
