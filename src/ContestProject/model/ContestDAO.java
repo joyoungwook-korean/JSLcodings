@@ -232,14 +232,15 @@ public class ContestDAO {
         if(jumin.substring(6,7).equals("1")) return "남";
         else return "여";
     }
+
     public String last_EntryNum() {
-        String sql = "select entry_no from tbl_entry_202106";
+        String sql = "select max(entry_no) as max from tbl_entry_202106";
         PreparedStatement pstmt = ContestMysqlManager.con(sql);
         String first_num = "0001";
         try {
             ResultSet rs = pstmt.executeQuery();
             if (rs.next()) {
-                first_num = rs.getString("entry_no");
+                first_num = rs.getString("max");
                 int temp = Integer.parseInt(first_num);
                 temp++;
                 first_num = String.valueOf(temp);
@@ -274,7 +275,6 @@ public class ContestDAO {
         }
         return check;
     }
-
 
     public boolean check_EntryNum(String entry_no) {
         String sql = "select entry_no from tbl_entry_202106 where entry_no=?";
