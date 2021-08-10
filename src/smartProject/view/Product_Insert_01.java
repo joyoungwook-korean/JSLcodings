@@ -5,10 +5,8 @@
 
 package smartProject.view;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
+
 import smartProject.model.SmartDAO;
 import smartProject.model.SmartVO;
 
@@ -18,8 +16,8 @@ public class Product_Insert_01 {
         SmartDAO dao = SmartDAO.getInstance();
         new ArrayList();
 
-        while(true) {
-            while(true) {
+        while (true) {
+            while (true) {
                 System.out.println("제품 등록 화면");
                 String code = scanner.next();
                 if (dao.check_Code(code)) {
@@ -41,10 +39,9 @@ public class Product_Insert_01 {
                         List<SmartVO> list = dao.select_All_Smart_Product();
                         System.out.println("제품코드 \t 제품명 \t  \t  제품규격 \t  \t 제품구분 \t 제품단가");
                         Iterator var6 = list.iterator();
-
-                        while(var6.hasNext()) {
-                            vo1 = (SmartVO)var6.next();
-                            System.out.println(vo1.getP_code() + " \t " + vo1.getP_name() + " \t \t " + vo1.getP_size() + " \t \t " + vo1.getP_type() + " \t \\" + vo1.getP_price());
+                        while (var6.hasNext()) {
+                            vo1 = (SmartVO) var6.next();
+                            System.out.println(vo1.getP_code() + " \t " + vo1.getP_name() + " \t \t " + vo1.getP_size() + " \t " + vo1.getP_type() + " \t " + Currency.getInstance(Locale.KOREA).getSymbol() + vo1.getP_price());
                         }
 
                         return;

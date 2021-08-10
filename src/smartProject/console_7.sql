@@ -24,6 +24,6 @@ create table tbl_process_201909(
     p_p5 char(1),
     p_p6 char(1),
     w_lastdate char(8),
-    w_lasttime char(4)
+    w_lasttime char(4),
+    primary key (w_workno)
 );
-

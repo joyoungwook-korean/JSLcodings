@@ -14,13 +14,13 @@ public class SmartMysqlManager {
     private static Connection conn = getConnection();
     public static Connection getConnection() {
         Connection connection = null;
-        String myDriver = "com.mysql.jdbc.Driver";
+      //  String myDriver = "com.mysql.jdbc.DriverManager";
         String myUrl = "jdbc:mysql://localhost:3306/track2_4";
         String myId = "track2_4";
         String myPassword = "1234";
 
         try {
-            Class.forName(myDriver);
+         //   Class.forName(myDriver);
             connection = DriverManager.getConnection(myUrl, myId, myPassword);
         } catch (Exception var6) {
             var6.printStackTrace();

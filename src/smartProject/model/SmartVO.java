@@ -5,6 +5,8 @@
 
 package smartProject.model;
 
+import java.util.List;
+
 public class SmartVO {
     private String p_code;
     private String p_name;
@@ -12,10 +14,20 @@ public class SmartVO {
     private String p_type;
     private int p_price;
     private String w_workno;
-    private String w_quentity;
+    private int w_quentity;
     private String w_workdate;
     private String w_lastdate;
     private String w_lasttime;
+
+    private List<String> p_px;
+
+    public List<String> getP_px() {
+        return p_px;
+    }
+
+    public void setP_px(List<String> p_px) {
+        this.p_px = p_px;
+    }
 
     public String getP_code() {
         return this.p_code;
@@ -65,11 +77,11 @@ public class SmartVO {
         this.w_workno = w_workno;
     }
 
-    public String getW_quentity() {
+    public int getW_quentity() {
         return this.w_quentity;
     }
 
-    public void setW_quentity(String w_quentity) {
+    public void setW_quentity(int w_quentity) {
         this.w_quentity = w_quentity;
     }
 
