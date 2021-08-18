@@ -1,31 +1,25 @@
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by FernFlower decompiler)
-//
-
-package smartProject.util;
+package com.company.jsl_08;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-public class SmartMysqlManager {
+public class OracleDBManager {
     private static Connection conn = getConnection();
+
     public static Connection getConnection() {
         Connection connection = null;
-      //  String myDriver = "com.mysql.jdbc.DriverManager";
-        String myUrl = "jdbc:mysql://localhost:3306/track2_4";
-        String myId = "track2_4";
+        String myDriver = "oracle.jdbc.driver.OracleDriver";
+        String myUrl = "jdbc:oracle:thin:@localhost:1521:XE";
+        String myId = "hr";
         String myPassword = "1234";
-
         try {
-         //   Class.forName(myDriver);
+            Class.forName(myDriver);
             connection = DriverManager.getConnection(myUrl, myId, myPassword);
         } catch (Exception var6) {
             var6.printStackTrace();
         }
-
         return connection;
     }
 
@@ -36,10 +30,21 @@ public class SmartMysqlManager {
         } catch (Exception var3) {
             var3.printStackTrace();
         }
-
         return pstmt;
     }
 
+    public static ResultSet con_rs(String sql) {
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+        try {
+            pstmt = conn.prepareStatement(sql);
+            rs = pstmt.executeQuery();
+        } catch (Exception var3) {
+            var3.printStackTrace();
+        }
+
+        return rs;
+    }
     public static void close(PreparedStatement pstmt) {
         try {
             pstmt.close();
@@ -60,4 +65,7 @@ public class SmartMysqlManager {
         }
 
     }
+
+
+
 }

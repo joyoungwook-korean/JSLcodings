@@ -17,6 +17,7 @@ public class Game_logic {
         game_for_List = set_To_Int_List(game);
         this.player = player;
     }
+
     public Game_logic() {
     }
 
