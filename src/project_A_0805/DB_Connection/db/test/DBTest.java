@@ -26,8 +26,10 @@ public class DBTest {
         //DB Logic 생성자로 Connection 반환
         DBLogic dbLogic = new DBLogic(dbManager.getConnection());
 
+        String sql = "";
+
         //인서트문
-        String sql = "insert into test values (?, ?)";
+        sql = "insert into test values (?, ?)";
         dbLogic.con_Update(sql, 88, "dd");
 
 

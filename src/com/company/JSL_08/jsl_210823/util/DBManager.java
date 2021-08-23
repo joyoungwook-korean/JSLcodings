@@ -1,10 +1,6 @@
-package project_A_0805.DB_Connection.db.util;
+package com.company.JSL_08.jsl_210823.util;
 
 import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.util.List;
-import java.util.Map;
 
 public interface DBManager {
     Connection getConnection();

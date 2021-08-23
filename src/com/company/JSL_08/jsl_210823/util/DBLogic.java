@@ -1,13 +1,12 @@
-package project_A_0805.DB_Connection.db.util;
+package com.company.JSL_08.jsl_210823.util;
+
+import com.company.JSL_08.jsl_210823.model.CommVO;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class DBLogic {
     private static Connection conn = null;
@@ -37,13 +36,16 @@ public class DBLogic {
         try {
             pstmt = conn.prepareStatement(sql);
             rs = pstmt.executeQuery();
-            ResultSetMetaData setMetaData = rs.getMetaData();
+
+           ResultSetMetaData setMetaData = rs.getMetaData();
             int sizeOfColums = setMetaData.getColumnCount();
             String column;
             while (rs.next()){
+
                 map = new HashMap<>();
                 for(int i = 1; i<=sizeOfColums; i++){
                     column = setMetaData.getColumnName(i);
+
                     map.put(column,rs.getString(column));
                 }
                 list_map.add(map);
